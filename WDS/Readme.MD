@@ -13,4 +13,4 @@ Then remove/disable the x86 options for the ISO boot disk creation.
 2. wds2.ini contains the configuration template for the location, username, password, and the domain.
 
 For reference:
-[ Installing and Configuring Microsoft Deployment Toolkit (MDT) 2013 on Windows Server 2012 R2](https://blog.itvce.com/2013/10/27/installing-and-configuring-microsoft-deployment-toolkit-mdt-2013-on-windows-server-2012-r2/)
+[Installing and Configuring Microsoft Deployment Toolkit (MDT) 2013 on Windows Server 2012 R2](https://blog.itvce.com/2013/10/27/installing-and-configuring-microsoft-deployment-toolkit-mdt-2013-on-windows-server-2012-r2/)
