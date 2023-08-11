@@ -16,3 +16,13 @@ Configures Github repository and installs the Github CLI.
 Downloads and installs the AWS CLI v2.
 
 Adds NeoFetch to ~/.bashrc.
+
+### Additional setup steps and notes
+
+[Node Version manager](https://github.com/nvm-sh/nvm)
+
+
+VS Code extensions
+```bash
+cat code-extensions.txt | xargs -L 1 code --install-extension
+```
