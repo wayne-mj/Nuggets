@@ -4,8 +4,18 @@ An eventual collection of shell scripts and documentation to setup a new system.
 
 ### Devtools shell script
 
-Installs the following dependencies and tools
-- wget curl gpg apt-transport-https git neofetch ca-certificates htop build-essential cmake keepassxc tmux
+Installs the following packages, dependencies and tools
+- wget & curl 
+- gpg 
+- apt-transport-https 
+- git 
+- neofetch 
+- ca-certificates 
+- htop 
+- build-essential 
+- cmake 
+- keepassxc 
+- tmux
 
 Configures the Microsoft Debian repository for regular release software and VS Code.
 
@@ -21,6 +31,7 @@ Adds NeoFetch to ~/.bashrc.
 
 [Node Version manager](https://github.com/nvm-sh/nvm)
 
+[Brave Browser](https://brave.com/linux/)
 
 VS Code extensions
 ```bash
