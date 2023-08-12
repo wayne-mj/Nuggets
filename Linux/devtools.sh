@@ -30,6 +30,8 @@ if [ ! -e ".devtools" ]; then
 
   echo Installing Dotnet 6.0 SDK, VS Code and Azure CLI
   sudo apt install -y code dotnet-sdk-6.0 azure-cli
+
+  rm packages-microsoft-prod.deb packages.microsoft.gpg
  }
 
  echo Install Github CLI
@@ -46,6 +48,8 @@ if [ ! -e ".devtools" ]; then
  [ -e awscliv2.zip ] && {
   unzip awscliv2.zip
   sudo ./aws/install
+  rm -rf aws
+  rm awscliv2.zip
  }
 
  echo Adding NeoFetch to bashrc
