@@ -37,3 +37,7 @@ VS Code extensions
 ```bash
 cat code-extensions.txt | xargs -L 1 code --install-extension
 ```
+
+## Work in progress ....    
+
+I am working on a script to that might support Arch Linux but my main development environment is Windows 11 and WSL2 (Debian) and I am progressing back to Linux and Unix after a long time away.
