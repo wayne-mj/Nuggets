@@ -282,3 +282,10 @@ label:focus {
 #scratchpad.empty {
 	background-color: transparent;
 }
+
+#custom-exit{
+	background-color: #bbccdd;
+	color: #333333;
+	margin: 6px 3px;
+	padding: 5px;
+}

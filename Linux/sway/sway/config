@@ -6,8 +6,8 @@
 
 exec wl-paste -t text --watch clipman store --no-persist
 
-gaps inner 1
-gaps outer 1
+gaps inner 2
+gaps outer 2
 default_border pixel 2
 
 ### Variables
@@ -25,7 +25,7 @@ set $term lxterminal
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 #set $menu dmenu_path | dmenu | xargs swaymsg exec --
-set $menu wofi --show drun
+set $menu wofi --show 
 
 include /etc/sway/config-vars.d/*
 
@@ -81,7 +81,8 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
     bindsym $mod+d exec $menu
 
     # Lock the screen
-    bindsym $mod+x exec swaylock -e -F -f --color 000000ee --indicator-radius 200 --indicator-thickness 30 -i ~/.config/swaylock/lock.jpg
+    #bindsym $mod+x exec swaylock -e -F -f --color 000000ee --indicator-radius 200 --indicator-thickness 30 -i ~/.config/swaylock/lock.jpg
+    bindsym $mod+x exec ~/Coding/scripts/lock.sh
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
