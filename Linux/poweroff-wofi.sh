@@ -1,5 +1,4 @@
 #!/bin/sh
-# A psuedo power menu for swaywm
 
 option1=" Lock"
 option2=" Logout"
@@ -8,7 +7,7 @@ option4=" Shutdown"
 
 options="$option1\n$option2\n$option3\n$option4"
 
-choice=$(echo "$options" | rofi -dmenu -i -no-show-icons -l 4 -window-title "Well?" -p "Power Menu")
+choice=$(echo "$options" | wofi -dmenu -i -L 5 -w 1 -p "Power Menu")
 
 #echo $choice
 case $choice in
