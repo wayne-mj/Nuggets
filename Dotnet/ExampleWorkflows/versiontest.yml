@@ -1,0 +1,22 @@
+name: Get Version
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - 'v*' # Run this workflow when a tag starting with 'v' is pushed
+
+jobs:
+  get-version:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Get version from tag
+        id: GetVersion
+        uses: wayne-mj/getversion@v1.5  # Or whatever the latest version is
+        
+      - name: Print version
+        run: echo "Version is ${{ steps.GetVersion.outputs.release_version }}"

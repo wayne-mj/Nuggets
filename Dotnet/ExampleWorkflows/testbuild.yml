@@ -1,0 +1,37 @@
+name: Run tests in known good environment
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Setup .Net 8.0
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.x
+      
+      - name: Get version from tag
+        id: GetVersion
+        uses: wayne-mj/getversion@v1.5
+        with:
+          version-format: 'without-v'
+
+      - name: Print version
+        run: echo "Version is ${{ steps.GetVersion.outputs.release_version }}"
+      
+      - name: Install dependencies
+        run: dotnet restore
+
+      - name: Build
+        run: dotnet build --configuration Release
+      
+      - name: Test
+        run: dotnet test --configuration Release --no-build --verbosity normal
