@@ -11,6 +11,6 @@ sudo apt install sway swaybg wofi fonts-font-awesome clipman waybar swaylock
 ## Additional packages
 
 ```
-sudo apt install neovim kitty rofi thunar-font-manager
+sudo apt install neovim kitty rofi thunar-font-manager alacritty
 ```  
 
