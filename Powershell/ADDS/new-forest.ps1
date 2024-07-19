@@ -1,7 +1,7 @@
 [CmdletBinding()]
 Param(
     [Parameter(Mandatory=$True)]
-    [string]$DomainName
+    [string]$DomainName,
 
     [Parameter(Mandatory=$True)]
     [string]$DomainNetBIOSName
