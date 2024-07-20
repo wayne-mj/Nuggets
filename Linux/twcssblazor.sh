@@ -33,7 +33,8 @@ fi
 # Modify index.html to include the tailwind css
 if [ -e ./wwwroot/index.html ] ; then
 	cd wwwroot
-	sed '/<link href="css\/app.css" rel="stylesheet" \/>/a <link href="css\/tailwind.css" rel="stylesheet" />' index.html > temp.html && mv temp.html index.html
+	#sed '/<link href="css\/app.css" rel="stylesheet" \/>/a <link href="css\/tailwind.css" rel="stylesheet" />' index.html > temp.html && mv temp.html index.html
+	sed '/css\/app.css/css\/tailwind.css/' index.html > temp.html && mv temp.html index.html
 	sed -i 's/<div id="app">/<div id="app" class="h-screen w-screen flex item-center justify-center">/g' index.html
 	cd ..
 fi
@@ -43,5 +44,3 @@ if [ ! -e ./starttwcss.sh ] ; then
 	echo "npx tailwindcss -i Styles/app.css -o wwwroot/css/tailwind.css --watch" > starttwcss.sh
 	chmod +x starttwcss.sh
 fi
-
-
